@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th"> <!-- กำหนดให้เป็นเอกสาร HTML5 และระบุว่าภาษาที่ใช้ในเอกสารนี้คือภาษาไทย -->
+<head>
+    <meta charset="UTF-8"> <!-- กำหนดการเข้ารหัสตัวอักษรเป็น UTF-8 เพื่อรองรับการแสดงผลภาษาไทย -->
+    <style>
+        body {
+            display: flex; /* กำหนดให้ใช้ Flexbox สำหรับการจัดเรียงองค์ประกอบใน body */
+            flex-direction: column; /* กำหนดการจัดเรียงองค์ประกอบในแนวตั้ง (column) */
+            align-items: center; /* จัดองค์ประกอบให้อยู่กึ่งกลางในแนวนอน */
+            background-color: #B0E0E6; /* กำหนดสีพื้นหลังเป็นสีฟ้าอ่อน (PowderBlue) */
+        }
+        h1 {
+            margin-top: 20px; /* กำหนดระยะห่างด้านบนของ h1 (หัวเรื่อง) ให้ห่าง 20px */
+            color: #1E90FF; /* กำหนดสีตัวอักษรเป็นสีน้ำเงิน (DodgerBlue) */
+        }
+        img {
+            width: 100%; /* กำหนดให้ภาพมีความกว้าง 100% ของ container ที่อยู่ */
+            max-width: 600px; /* กำหนดความกว้างสูงสุดของภาพไม่เกิน 600px */
+            border: 2px solid #ccc; /* กำหนดเส้นขอบของภาพหนา 2px สีเทาอ่อน (#ccc) */
+            border-radius: 10px; /* กำหนดมุมของขอบภาพให้โค้งมนด้วยรัศมี 10px */
+        }
+    </style>
+</head>
+<body>
+    <h1>Finger-counting</h1> <!-- แสดงหัวเรื่องขนาดใหญ่ที่มีข้อความว่า "Finger-counting" -->
+    <div>
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed"> <!-- แสดงฟีดวิดีโอจากฟังก์ชันใน Flask โดยใช้ URL ที่สร้างจาก url_for -->
+    </div>
+</body>
+</html>
